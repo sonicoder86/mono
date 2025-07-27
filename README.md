@@ -1,0 +1,2 @@
+# mono
+Fullstack Typescript Monorepo
