@@ -2,6 +2,10 @@
 
 This Turborepo starter is maintained by the Turborepo core team.
 
+## Tsconfig guideline
+
+https://www.totaltypescript.com/tsconfig-cheat-sheet
+
 ## Using this example
 
 Run the following command:
