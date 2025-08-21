@@ -3,19 +3,18 @@
   "version": "0.1.0",
   "type": "module",
   "private": true,
+  "engines": {
+    "node": ">=22.18.0"
+  },
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "node src/index.ts",
     "build": "tsc",
-    "dev": "run-p dev:*",
-    "dev:node": "node --watch dist/index.js",
-    "dev:build": "npm run build -- --watch",
-    "dev:tsc": "tsc --watch --noEmit --preserveWatchOutput",
+    "dev": "node --watch src/index.ts",
+    "check-types": "tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "@types/node": "^22.15.3",
-    "esbuild": "^0.25.8",
-    "npm-run-all": "^4.1.5",
     "typescript": "5.8.2"
   },
   "dependencies": {

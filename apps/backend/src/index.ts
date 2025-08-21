@@ -1,8 +1,8 @@
 import { Hono } from 'hono';
 import { serve } from '@hono/node-server';
 import { cors } from 'hono/cors'
-import { rootRoute } from './routes/root.js';
-import { healthRoute } from './routes/health.js';
+import { rootRoute } from './routes/root.ts';
+import { healthRoute } from './routes/health.ts';
 
 const app = new Hono();
 
