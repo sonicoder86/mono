@@ -9,16 +9,26 @@
   "scripts": {
     "start": "node src/index.ts",
     "build": "tsc",
-    "dev": "node --watch src/index.ts",
+    "dev": "node --watch --env-file=.env src/index.ts",
     "check-types": "tsc --noEmit",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format:check": "biome format",
+    "format:write": "biome format --write"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.2.0",
     "@types/node": "^22.15.3",
+    "drizzle-kit": "^0.31.4",
     "typescript": "5.8.2"
   },
   "dependencies": {
     "@hono/node-server": "^1.17.1",
-    "hono": "^4.8.9"
+    "drizzle-orm": "^0.44.4",
+    "hono": "^4.8.9",
+    "postgres": "^3.4.7",
+    "zod": "^4.0.17"
+  },
+  "imports": {
+    "#@/*.ts": "./src/*.ts"
   }
 }
